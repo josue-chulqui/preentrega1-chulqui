@@ -20,14 +20,18 @@ function pedirPresupuesto(codigo) {// codigo: traerá el id del producto
     }
 }
 
-function pedirPresupuesto() {
-    // let preguntar = true
-    let codigoPrenda = prompt("Ingresa el código numérico de la prenda a consultar:")
+function consultarVehiculo() {
+    let preguntar = true
 
-    if (codigoPrecio !== '' && codigoPrecio !== null) {
-        pedirPresupuesto(parseInt(codigoPrecio))
-        
-    } else {
-        console.warn("Ingresa un código de prenda válido.")
+    while(preguntar) {
+        let codigoPrecio = prompt("Ingresa el código numérico del vehiculo a consultar:")
+
+        if (codigoPrecio !== '' && codigoPrecio !== null) {
+            pedirPresupuesto(parseInt(codigoPrecio))
+           
+        } else {
+            console.warn("Ingresa un código de vehiculo válido.")
+        }
+        preguntar = confirm("¿Deseas conocer el precio de otro vehiculo?")
     }
 }
