@@ -35,3 +35,5 @@ function consultarVehiculo() {
         preguntar = confirm("¿Deseas conocer el precio de otro vehiculo?")
     }
 }
+
+consultarVehiculo()
